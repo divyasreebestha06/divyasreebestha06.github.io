@@ -1,0 +1,887 @@
+[
+  {
+    "id": "smart-ai-code-reviewer",
+    "title": "Smart AI Code Reviewer",
+    "category": "AI & Machine Learning",
+    "tagline": "Automated multi-language AST inspection and static code analysis engine",
+    "tech": [
+      "Python",
+      "Django",
+      "React",
+      "REST APIs",
+      "MySQL",
+      "AST Parsing"
+    ],
+    "github": "https://github.com/divyasreebestha06/smart-ai-code-reviewer",
+    "featured": true,
+    "badge": "Flagship AI",
+    "description": "Full-stack static code analysis platform integrating a Django backend with a React UI to detect syntax bugs, anti-patterns, and provide AI-driven code optimization advice.",
+    "caseStudy": {
+      "problem": "Manual code reviews fail to catch syntax edge-cases, memory leaks, and algorithmic time complexity traps before deployment.",
+      "architecture": "Client-Server model: React UI communicates over RESTful JSON APIs with Django backend, processing code via Python AST visitors.",
+      "challenges": [
+        "Parsing multi-language ASTs safely without execution.",
+        "Optimizing serialization latency during high-frequency review runs."
+      ],
+      "solution": "Built isolated in-memory AST tokenization with strict timeout barriers and optimized database query execution.",
+      "impact": "Reduces initial code health turnaround time by over 70%."
+    }
+  },
+  {
+    "id": "smart-ai-code-review-system",
+    "title": "Smart AI Code Review System",
+    "category": "AI & Machine Learning",
+    "tagline": "Automated code reviewer analyzing GitHub repositories for vulnerabilities",
+    "tech": [
+      "Python",
+      "GitHub API",
+      "NLP",
+      "AST",
+      "Security Auditing"
+    ],
+    "github": "https://github.com/divyasreebestha06/smart-ai-code-review-system",
+    "featured": false,
+    "badge": "Code Intelligence",
+    "description": "Automated repository scanner integrating with the GitHub REST API to perform static vulnerability analysis, syntax verification, and pull request audits.",
+    "caseStudy": {
+      "problem": "Developers need continuous automated pull request reviews to maintain code quality standards across repositories.",
+      "architecture": "Event listener consuming repository webhooks, downloading diff payloads, and analyzing AST nodes for security smells.",
+      "challenges": [
+        "Handling large git diff trees efficiently.",
+        "Rate limit management on GitHub API."
+      ],
+      "solution": "Chunked diff parser with cached token bucket rate limiting.",
+      "impact": "Delivers comprehensive PR review reports with automated severity grading."
+    }
+  },
+  {
+    "id": "ai-voice-assistant",
+    "title": "AI Voice Assistant",
+    "category": "AI & Machine Learning",
+    "tagline": "Hands-free voice recognition, conversational NLU, and desktop automation",
+    "tech": [
+      "Python",
+      "SpeechRecognition",
+      "Pyttsx3",
+      "NLU",
+      "System Automation"
+    ],
+    "github": "https://github.com/divyasreebestha06/ai-voice-assistant",
+    "featured": true,
+    "badge": "Voice AI",
+    "description": "Multimodal desktop voice assistant executing conversational commands, application control, automated web search, and email dispatch through acoustic processing.",
+    "caseStudy": {
+      "problem": "Users require intuitive hands-free voice automation for rapid desktop multitasking.",
+      "architecture": "Acoustic noise calibration layer, speech-to-text acoustic parsing, intent routing engine, and text-to-speech output.",
+      "challenges": [
+        "Ambient background noise interference.",
+        "Sub-second intent classification."
+      ],
+      "solution": "Implemented dynamic energy threshold calibration and mapped asynchronous background command workers.",
+      "impact": "Achieves sub-second command interpretation with hands-free desktop execution."
+    }
+  },
+  {
+    "id": "ai-code-complexity-analyzer",
+    "title": "AI Code Complexity Analyzer",
+    "category": "AI & Machine Learning",
+    "tagline": "Cyclomatic complexity & maintainability index calculator using AST",
+    "tech": [
+      "Python AST",
+      "McCabe Complexity",
+      "Maintainability Index",
+      "Static Analysis"
+    ],
+    "github": "https://github.com/divyasreebestha06/ai-code-complexity-analyzer",
+    "featured": false,
+    "badge": "Static Analysis",
+    "description": "Static Python code quality analyzer traversing AST nodes to compute McCabe Cyclomatic Complexity, Halstead volume, and Maintainability Index (0-100).",
+    "caseStudy": {
+      "problem": "Unchecked cyclomatic complexity creates brittle, untestable codebases prone to regressions.",
+      "architecture": "AST node visitor tallying decision branches (if/elif/for/while/try) and computing normalized maintainability formulas.",
+      "challenges": [
+        "Handling nested comprehension branching accurately."
+      ],
+      "solution": "Custom AST NodeVisitor with recursive branch depth tracking.",
+      "impact": "Provides instant code health grading (EXCELLENT, MODERATE, REFACTOR)."
+    }
+  },
+  {
+    "id": "automated-git-commit-linter",
+    "title": "Automated Git Commit Linter",
+    "category": "AI & Machine Learning",
+    "tagline": "Conventional Commits 1.0.0 specification validator and Git hook enforcer",
+    "tech": [
+      "Python",
+      "Git Hooks",
+      "Regex",
+      "DevOps",
+      "CLI Tool"
+    ],
+    "github": "https://github.com/divyasreebestha06/automated-git-commit-linter",
+    "featured": false,
+    "badge": "DevOps Tooling",
+    "description": "Developer tooling validating Conventional Commits format, enforcing character length limits, header styling, and installing automated commit-msg hooks.",
+    "caseStudy": {
+      "problem": "Inconsistent git commit messages hinder automated changelog generation and semantic versioning.",
+      "architecture": "CLI tool parsing commit messages against Conventional Commits regex and shell hook installer script.",
+      "challenges": [
+        "Cross-platform git hook file permission management on Windows/Linux."
+      ],
+      "solution": "Deterministic POSIX hook template with chmod executable bit enforcement.",
+      "impact": "Guarantees 100% commit message hygiene across team repositories."
+    }
+  },
+  {
+    "id": "divyasree-binance-bot",
+    "title": "Binance Futures Trading Bot",
+    "category": "Backend & Microservices",
+    "tagline": "Automated real-time algorithmic cryptocurrency futures trading engine",
+    "tech": [
+      "Python",
+      "Binance API",
+      "Pandas",
+      "MySQL",
+      "HMAC-SHA256",
+      "WebSocket"
+    ],
+    "github": "https://github.com/divyasreebestha06/divyasree-binance-bot",
+    "featured": true,
+    "badge": "Algorithmic Trading",
+    "description": "Automated algorithmic trading engine interfacing with Binance Futures over HTTP/WebSocket to monitor order books, execute orders, and log trade metrics.",
+    "caseStudy": {
+      "problem": "Cryptocurrency futures require 24/7 continuous low-latency execution free from emotional bias and manual delay.",
+      "architecture": "Continuous event loop ingesting live ticker feeds, processing indicators via Pandas, and dispatching HMAC-SHA256 signed orders.",
+      "challenges": [
+        "Handling exchange network drops, API rate limits, and WebSocket reconnects."
+      ],
+      "solution": "Structured logging with tiered exception boundaries and exponential backoff.",
+      "impact": "Operates continuously with disciplined risk-to-reward parameters."
+    }
+  },
+  {
+    "id": "consistent-hashing-load-balancer",
+    "title": "Consistent Hashing Load Balancer",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "Distributed hash ring with virtual nodes, bisect lookup, and minimal node churn",
+    "tech": [
+      "Python",
+      "MD5",
+      "Consistent Hashing",
+      "Bisect",
+      "Distributed Systems"
+    ],
+    "github": "https://github.com/divyasreebestha06/consistent-hashing-load-balancer",
+    "featured": true,
+    "badge": "Distributed Systems",
+    "description": "Consistent Hash Ring with 100 virtual node replicas per physical host and logarithmic bisect lookups, distributing cache keys with minimal reassignment.",
+    "caseStudy": {
+      "problem": "Modulo hashing (hash % N) invalidates nearly 100% of keys during node additions or removals.",
+      "architecture": "32-bit hash continuum ring. Physical hosts map to K virtual nodes via salted MD5 hashes. Lookups use bisect_right binary search.",
+      "challenges": [
+        "Non-uniform key distribution on small cluster topologies."
+      ],
+      "solution": "Configured 100 virtual node replicas, maintaining key deviation under 5%.",
+      "impact": "Guarantees only K/N keys are moved during scaling operations."
+    }
+  },
+  {
+    "id": "distributed-rate-limiter-service",
+    "title": "Distributed Rate Limiter Service",
+    "category": "Backend & Microservices",
+    "tagline": "Dual-algorithm rate limiting with Token Bucket and Sliding Window Log",
+    "tech": [
+      "Python",
+      "Token Bucket",
+      "Sliding Window",
+      "Concurrency",
+      "REST"
+    ],
+    "github": "https://github.com/divyasreebestha06/distributed-rate-limiter-service",
+    "featured": true,
+    "badge": "High Throughput",
+    "description": "API rate limiting service featuring Token Bucket for smooth burst capacity and Sliding Window Log for zero-boundary time accuracy with client isolation.",
+    "caseStudy": {
+      "problem": "Unprotected endpoints suffer from volumetric bursts and boundary-skipping attacks.",
+      "architecture": "In-memory thread-safe rate limiter managing independent client buckets with sub-second sliding windows.",
+      "challenges": [
+        "Preventing double-allow bursts at window edges."
+      ],
+      "solution": "Engineered Sliding Window Log with atomic mutex locks.",
+      "impact": "Protects backend microservices with sub-millisecond evaluation overhead."
+    }
+  },
+  {
+    "id": "custom-inmemory-cache-engine",
+    "title": "Custom O(1) LRU Cache Engine",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "High-throughput O(1) LRU cache with TTL expiration and thread safety",
+    "tech": [
+      "Python",
+      "Doubly-Linked List",
+      "Hash Map",
+      "Mutex Locks",
+      "Data Structures"
+    ],
+    "github": "https://github.com/divyasreebestha06/custom-inmemory-cache-engine",
+    "featured": true,
+    "badge": "Data Structures",
+    "description": "Ultra-fast in-memory cache combining a hash map with a doubly-linked list for guaranteed O(1) reads, updates, and evictions, plus timestamped TTL expiration.",
+    "caseStudy": {
+      "problem": "Database read contention on static session and configuration records introduces substantial latency.",
+      "architecture": "Hash map pointers referencing doubly-linked list nodes with sentinel head and tail nodes, protected by mutex locks.",
+      "challenges": [
+        "O(1) node relocation without table scanning; passive stale key eviction."
+      ],
+      "solution": "Inline node unlinking and lazy TTL eviction during access.",
+      "impact": "Delivers sub-microsecond cache access with bounded memory usage."
+    }
+  },
+  {
+    "id": "pubsub-message-broker-simulator",
+    "title": "Pub/Sub Message Broker Simulator",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "In-memory publish-subscribe message broker with topic fanout and ACK queues",
+    "tech": [
+      "Python",
+      "Message Broker",
+      "Event-Driven",
+      "Queues",
+      "Concurrency"
+    ],
+    "github": "https://github.com/divyasreebestha06/pubsub-message-broker-simulator",
+    "featured": false,
+    "badge": "Event-Driven",
+    "description": "Asynchronous publish-subscribe messaging engine with topic fanout, multi-consumer FIFO queues, message persistence, and explicit ACK handling.",
+    "caseStudy": {
+      "problem": "Tight coupling between producer and consumer services causes cascading failures.",
+      "architecture": "Topic registry managing multiple subscriber channels with isolated queue buffers and dead-letter handling.",
+      "challenges": [
+        "Thread-safe concurrent message delivery."
+      ],
+      "solution": "Worker thread pool with thread-safe queue dispatching.",
+      "impact": "Decouples microservices with zero external broker dependencies."
+    }
+  },
+  {
+    "id": "api-gateway-reverse-proxy",
+    "title": "API Gateway & Reverse Proxy",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "Reverse proxy with longest-prefix routing, header transformation, and circuit breaker",
+    "tech": [
+      "Python",
+      "API Gateway",
+      "Circuit Breaker",
+      "Reverse Proxy",
+      "HTTP"
+    ],
+    "github": "https://github.com/divyasreebestha06/api-gateway-reverse-proxy",
+    "featured": false,
+    "badge": "Network Architecture",
+    "description": "Reverse proxy gateway featuring longest-prefix URL routing, HTTP header mutation, hop-by-hop stripping, and three-state circuit breaker health monitoring.",
+    "caseStudy": {
+      "problem": "Exposing internal microservices directly creates security vulnerabilities and lacks centralized failover.",
+      "architecture": "Gateway intercepting HTTP requests, checking circuit breaker health states (CLOSED/OPEN/HALF_OPEN), and forwarding payloads.",
+      "challenges": [
+        "Hop-by-hop header pollution and downstream connection timeouts."
+      ],
+      "solution": "Automated hop-by-hop header sanitizer and configurable timeout circuit breakers.",
+      "impact": "Provides resilient API perimeter management and automatic fault isolation."
+    }
+  },
+  {
+    "id": "serverless-aws-s3-file-manager",
+    "title": "Serverless AWS S3 File Manager",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "Cloud object storage abstraction with multipart upload and MD5 ETags",
+    "tech": [
+      "Python",
+      "AWS S3",
+      "Cloud Storage",
+      "MD5",
+      "Multipart Upload"
+    ],
+    "github": "https://github.com/divyasreebestha06/serverless-aws-s3-file-manager",
+    "featured": false,
+    "badge": "Cloud Storage",
+    "description": "Cloud object storage client abstraction layer offering AWS S3 API compatibility, chunked multipart upload reassembly, and MD5 ETag generation.",
+    "caseStudy": {
+      "problem": "Uploading multi-gigabyte files over unstable networks leads to failed transfers and wasted bandwidth.",
+      "architecture": "Chunked upload manager dividing files into 5MB parts, persisting chunks with unique upload IDs, and reassembling in order.",
+      "challenges": [
+        "Out-of-order chunk assembly and part integrity verification."
+      ],
+      "solution": "Deterministic part numbering with MD5 checksum verification per part.",
+      "impact": "Enables fault-tolerant large file uploads to cloud object storage."
+    }
+  },
+  {
+    "id": "github-actions-ci-cd-template",
+    "title": "GitHub Actions CI/CD Pipeline Template",
+    "category": "Distributed Systems & Cloud",
+    "tagline": "Production CI/CD matrix pipeline with security scanning and Docker packaging",
+    "tech": [
+      "GitHub Actions",
+      "CI/CD",
+      "DevOps",
+      "Python Matrix",
+      "Bandit Security"
+    ],
+    "github": "https://github.com/divyasreebestha06/github-actions-ci-cd-template",
+    "featured": false,
+    "badge": "CI/CD DevOps",
+    "description": "Enterprise-ready CI/CD automation template executing multi-version Python testing (3.9\u20133.12), bandit static security analysis, linting, and Docker packaging.",
+    "caseStudy": {
+      "problem": "Manual testing across operating systems and Python versions is slow and error-prone.",
+      "architecture": "Multi-stage pipeline definition: Matrix test runner, static code linting, vulnerability scanner, and container build stages.",
+      "challenges": [
+        "Fast pipeline feedback while maintaining thorough coverage."
+      ],
+      "solution": "Parallelized matrix workflows with dependency caching.",
+      "impact": "Ensures zero unverified code merges into production branches."
+    }
+  },
+  {
+    "id": "oauth2-jwt-auth-microservice",
+    "title": "OAuth2 & JWT Auth Microservice",
+    "category": "Backend & Microservices",
+    "tagline": "Stateless OAuth2 JWT authentication with cryptographically secure token signing",
+    "tech": [
+      "Python",
+      "JWT",
+      "OAuth2",
+      "HMAC-SHA256",
+      "Security",
+      "BCrypt"
+    ],
+    "github": "https://github.com/divyasreebestha06/oauth2-jwt-auth-microservice",
+    "featured": false,
+    "badge": "Security",
+    "description": "Stateless authentication microservice generating cryptographically signed JWT tokens, Base64URL encoding, salted SHA256 password hashing, and token verification.",
+    "caseStudy": {
+      "problem": "Stateful session management fails to scale across distributed, containerized microservices.",
+      "architecture": "HMAC-SHA256 signed token issuer with expiration claims and role-based payload claims.",
+      "challenges": [
+        "Token tampering prevention and replay attack protection."
+      ],
+      "solution": "Strict header signature validation and expiration timestamp enforcement.",
+      "impact": "Enables stateless, secure user authentication across distributed microservices."
+    }
+  },
+  {
+    "id": "role-based-access-control-service",
+    "title": "Role-Based Access Control (RBAC)",
+    "category": "Backend & Microservices",
+    "tagline": "Hierarchical RBAC service with bitwise permission masks and route guards",
+    "tech": [
+      "Python",
+      "RBAC",
+      "Access Control",
+      "Security",
+      "Bitwise Masks"
+    ],
+    "github": "https://github.com/divyasreebestha06/role-based-access-control-service",
+    "featured": false,
+    "badge": "Security Architecture",
+    "description": "Hierarchical access control engine supporting transitive role inheritance, bitwise permission masks (READ, WRITE, EXECUTE, ADMIN), and route guard middleware.",
+    "caseStudy": {
+      "problem": "Hardcoded authorization logic creates privilege escalation vulnerabilities and administrative overhead.",
+      "architecture": "Bitwise permission bitmasks allowing O(1) permission checks with role inheritance graph resolution.",
+      "challenges": [
+        "Cycle detection in role inheritance hierarchies."
+      ],
+      "solution": "Directed acyclic graph traversal with memoized permission lookups.",
+      "impact": "Delivers sub-millisecond route authorization with zero privilege leaks."
+    }
+  },
+  {
+    "id": "dockerized-flask-notification-service",
+    "title": "Dockerized Notification Service",
+    "category": "Backend & Microservices",
+    "tagline": "Multi-channel notification dispatcher supporting Email, Webhooks, and SMS",
+    "tech": [
+      "Python",
+      "Flask",
+      "Docker",
+      "Strategy Pattern",
+      "Microservices"
+    ],
+    "github": "https://github.com/divyasreebestha06/dockerized-flask-notification-service",
+    "featured": false,
+    "badge": "Microservices",
+    "description": "Containerized multi-channel notification dispatcher using the Strategy Pattern to decouple Email, Webhook, and SMS delivery channels with retry handling.",
+    "caseStudy": {
+      "problem": "Direct third-party notification calls slow down main application response threads.",
+      "architecture": "Strategy pattern dispatchers wrapped in Flask REST API and packaged in lightweight Docker containers.",
+      "challenges": [
+        "Graceful channel degradation when external webhooks fail."
+      ],
+      "solution": "Configured isolated dispatcher adapters with delivery status reporting.",
+      "impact": "Standardizes notification routing across all internal services."
+    }
+  },
+  {
+    "id": "spring-boot-employee-management-api",
+    "title": "Spring Boot Employee Management API",
+    "category": "Java & Spring Boot",
+    "tagline": "Enterprise Employee Directory API with Maven architecture and REST endpoints",
+    "tech": [
+      "Java 17",
+      "Spring Boot",
+      "REST APIs",
+      "Maven",
+      "OOP"
+    ],
+    "github": "https://github.com/divyasreebestha06/spring-boot-employee-management-api",
+    "featured": false,
+    "badge": "Enterprise Java",
+    "description": "Enterprise Spring Boot RESTful API implementing layered architecture (Controller, Service, Repository), DTO validation, and thread-safe data persistence.",
+    "caseStudy": {
+      "problem": "Legacy corporate directories lack clean REST APIs and structured data validation for employee records.",
+      "architecture": "Spring Boot 3 application with dependency injection, layered controller-service-repository pattern, and Maven POM build.",
+      "challenges": [
+        "Thread safety during concurrent employee directory updates."
+      ],
+      "solution": "ConcurrentHashMap repository layer with atomic compute methods.",
+      "impact": "Clean, enterprise-grade Java REST API ready for corporate HR systems."
+    }
+  },
+  {
+    "id": "spring-boot-banking-transaction-service",
+    "title": "Spring Boot Banking Ledger Service",
+    "category": "Java & Spring Boot",
+    "tagline": "ACID banking transaction ledger with transfer invariant verification",
+    "tech": [
+      "Java 17",
+      "Spring Boot",
+      "Banking Ledger",
+      "ACID",
+      "Maven"
+    ],
+    "github": "https://github.com/divyasreebestha06/spring-boot-banking-transaction-service",
+    "featured": false,
+    "badge": "Financial Systems",
+    "description": "Double-entry banking transaction ledger enforcing balance invariants, atomic fund transfers, debit/credit audit records, and overdraft protection.",
+    "caseStudy": {
+      "problem": "Financial systems require absolute transactional consistency to prevent money creation or loss during concurrent transfers.",
+      "architecture": "Account domain models enforcing invariant checks: sum of debits equals sum of credits with atomic account locking.",
+      "challenges": [
+        "Deadlock prevention during concurrent mutual transfers (User A -> B and User B -> A)."
+      ],
+      "solution": "Consistent lock ordering based on account ID sort order.",
+      "impact": "Guarantees zero balance invariant violations under high concurrency."
+    }
+  },
+  {
+    "id": "spring-boot-library-inventory-system",
+    "title": "Spring Boot Library Circulation System",
+    "category": "Java & Spring Boot",
+    "tagline": "Library inventory & loan circulation system tracking finite catalog state",
+    "tech": [
+      "Java 17",
+      "Spring Boot",
+      "Circulation",
+      "State Machine",
+      "Maven"
+    ],
+    "github": "https://github.com/divyasreebestha06/spring-boot-library-inventory-system",
+    "featured": false,
+    "badge": "Enterprise Java",
+    "description": "Circulation management system tracking book lifecycle states (AVAILABLE, BORROWED, OVERDUE), ISBN indexing, and member borrowing limits.",
+    "caseStudy": {
+      "problem": "Libraries face inventory inaccuracies when book availability states are updated without atomic checks.",
+      "architecture": "Deterministic state machine managing loan transitions with ISBN indexing and member loan limits.",
+      "challenges": [
+        "Preventing over-borrowing beyond maximum allowance."
+      ],
+      "solution": "Strict validation guards on loan checkout workflows.",
+      "impact": "Automates library circulation operations with zero missing inventory."
+    }
+  },
+  {
+    "id": "docspot-healthcare",
+    "title": "DocSpot: Healthcare Booking",
+    "category": "Full-Stack Web",
+    "tagline": "Seamless doctor appointment booking, patient triage, and schedule management",
+    "tech": [
+      "Python",
+      "Django",
+      "MySQL",
+      "REST APIs",
+      "HTML5/CSS3"
+    ],
+    "github": "https://github.com/divyasreebestha06/Docspot-seamless-Appointment-Booking-For-Health",
+    "featured": true,
+    "badge": "Healthcare Platform",
+    "description": "Healthcare appointment management platform bridging patients with medical specialists, featuring dynamic slot reservations and confirmation workflows.",
+    "caseStudy": {
+      "problem": "Overcrowded clinic waiting rooms and double-booking errors caused by fragmented phone-based reservation systems.",
+      "architecture": "Role-based architecture separating Patient, Doctor, and Clinic Administrator portals with relational MySQL tables enforcing slot uniqueness.",
+      "challenges": [
+        "Preventing overlapping bookings when two patients select the same specialist slot simultaneously."
+      ],
+      "solution": "Database-level unique constraints on (doctor_id, appointment_slot) with responsive booking workflows.",
+      "impact": "Eliminates double-booking errors and provides instant visibility into doctor availability."
+    }
+  },
+  {
+    "id": "fullstack-kanban-board",
+    "title": "Full-Stack Agile Kanban Board",
+    "category": "Full-Stack Web",
+    "tagline": "Interactive sprint board with React frontend, FastAPI backend, and drag-and-drop",
+    "tech": [
+      "React 18",
+      "FastAPI",
+      "Python",
+      "SQLite",
+      "REST APIs"
+    ],
+    "github": "https://github.com/divyasreebestha06/fullstack-kanban-board",
+    "featured": true,
+    "badge": "Full-Stack Agile",
+    "description": "Collaborative Agile sprint management application featuring a reactive React UI, three-stage Kanban columns (To Do, In Progress, Done), and FastAPI backend persistence.",
+    "caseStudy": {
+      "problem": "Software teams need visual, low-latency task tracking tools that maintain atomic state integrity.",
+      "architecture": "Separated frontend/backend: React component managing local column state with optimistic UI updates backed by RESTful FastAPI endpoints writing to SQLite.",
+      "challenges": [
+        "Preventing invalid status transitions and maintaining task order integrity."
+      ],
+      "solution": "Modeled state machine validation at both API and database layers with comprehensive unit tests.",
+      "impact": "Clean, responsive project management interface ready for team sprint workflows."
+    }
+  },
+  {
+    "id": "fullstack-markdown-notes-app",
+    "title": "Full-Stack Markdown Notes App",
+    "category": "Full-Stack Web",
+    "tagline": "Markdown knowledge base with hashtag indexing (#tag) and full-text search",
+    "tech": [
+      "React 18",
+      "Python",
+      "Inverted Index",
+      "Markdown",
+      "REST APIs"
+    ],
+    "github": "https://github.com/divyasreebestha06/fullstack-markdown-notes-app",
+    "featured": false,
+    "badge": "Full-Stack App",
+    "description": "Knowledge base application featuring real-time hashtag parsing (#tag) from Markdown text, inverted index searching, responsive React UI, and REST API handlers.",
+    "caseStudy": {
+      "problem": "Developers need lightweight, tag-driven documentation tools that don't require heavy database setup.",
+      "architecture": "In-memory inverted tag index automatically extracted from Markdown text using regex parsing.",
+      "challenges": [
+        "Extracting tags dynamically without duplicate indexing."
+      ],
+      "solution": "Inverted index mapping tags to note IDs with set deduplication.",
+      "impact": "Instantaneous tag-based note discovery and seamless markdown editing."
+    }
+  },
+  {
+    "id": "fastapi-task-management-api",
+    "title": "FastAPI Task Management API",
+    "category": "Backend & Microservices",
+    "tagline": "Production CRUD task management engine with SQLite and Pydantic v2 schemas",
+    "tech": [
+      "FastAPI",
+      "SQLite",
+      "Pydantic v2",
+      "Swagger UI",
+      "REST APIs"
+    ],
+    "github": "https://github.com/divyasreebestha06/fastapi-task-management-api",
+    "featured": false,
+    "badge": "FastAPI",
+    "description": "Asynchronous RESTful task management API with SQLite persistence, status transitions (TODO -> IN_PROGRESS -> DONE), priority filtering, and auto-generated OpenAPI schemas.",
+    "caseStudy": {
+      "problem": "Building lightweight microservices requires fast request deserialization and automated API documentation.",
+      "architecture": "FastAPI application with Pydantic v2 data validation schemas and thread-safe SQLite connection handling.",
+      "challenges": [
+        "Preventing SQLite database locks under concurrent write operations on Windows."
+      ],
+      "solution": "Explicit connection lifecycle management with try-finally resource cleanup.",
+      "impact": "Serves high-throughput task management endpoints with automatic interactive documentation."
+    }
+  },
+  {
+    "id": "django-job-board-platform",
+    "title": "Django Job Board & ATS Platform",
+    "category": "Backend & Microservices",
+    "tagline": "Applicant tracking system tracking job vacancies and candidate lifecycles",
+    "tech": [
+      "Django",
+      "Python",
+      "SQLite",
+      "ORM",
+      "ATS Architecture"
+    ],
+    "github": "https://github.com/divyasreebestha06/django-job-board-platform",
+    "featured": false,
+    "badge": "Django Platform",
+    "description": "Applicant Tracking System (ATS) backend managing job vacancies, applicant submissions, hiring stage state machine (APPLIED -> INTERVIEW -> HIRED), and recruiter metrics.",
+    "caseStudy": {
+      "problem": "Recruiting platforms need structured candidate lifecycle tracking and vacancy management.",
+      "architecture": "Django ORM models mapping job openings and applicant states with relational foreign key integrity.",
+      "challenges": [
+        "Preventing duplicate applications and managing vacancy closing state transitions."
+      ],
+      "solution": "Database-level uniqueness validation and atomic state transition methods.",
+      "impact": "Streamlines applicant processing for recruitment workflows."
+    }
+  },
+  {
+    "id": "django-event-booking-engine",
+    "title": "Django Event Booking Engine",
+    "category": "Backend & Microservices",
+    "tagline": "Concurrency-safe event reservation system with thread mutex lock protection",
+    "tech": [
+      "Django",
+      "Threading Mutex",
+      "SQLite",
+      "Concurrency",
+      "Booking"
+    ],
+    "github": "https://github.com/divyasreebestha06/django-event-booking-engine",
+    "featured": false,
+    "badge": "Concurrency Safe",
+    "description": "High-concurrency seat reservation engine with thread-safe reentrant locks preventing overbooking race conditions during high-volume ticket release windows.",
+    "caseStudy": {
+      "problem": "Flash ticket releases cause race conditions where two users book the last available seat simultaneously.",
+      "architecture": "Thread-safe reservation engine wrapping inventory decrements in reentrant mutex locks (threading.RLock).",
+      "challenges": [
+        "Zero overbooking tolerance under simulated concurrent worker threads."
+      ],
+      "solution": "Atomic lock acquisition around seat capacity verification and decrement.",
+      "impact": "Passed 100% of concurrent race condition unit tests without overbooking."
+    }
+  },
+  {
+    "id": "url-shortener-analytics-service",
+    "title": "URL Shortener & Analytics Service",
+    "category": "Backend & Microservices",
+    "tagline": "High-performance URL shortener with Base62 encoding and 307 redirects",
+    "tech": [
+      "Python",
+      "Base62",
+      "Analytics",
+      "Redirects",
+      "REST APIs"
+    ],
+    "github": "https://github.com/divyasreebestha06/url-shortener-analytics-service",
+    "featured": false,
+    "badge": "High Throughput",
+    "description": "Bijective Base62 URL shortener with atomic click tracking, HTTP 307 temporary redirects, and per-link referrer analytics reporting.",
+    "caseStudy": {
+      "problem": "Long URLs degrade user experience and lack click telemetry for analytics.",
+      "architecture": "Base62 bijective encoding algorithm converting auto-increment IDs to compact alphanumeric strings.",
+      "challenges": [
+        "Atomic click tracking without locking the redirect response path."
+      ],
+      "solution": "O(1) in-memory analytics increment with 307 temporary redirect response.",
+      "impact": "Processes sub-millisecond URL lookups with full click telemetry."
+    }
+  },
+  {
+    "id": "micro-ecommerce-catalog-service",
+    "title": "Micro E-Commerce Catalog Service",
+    "category": "Backend & Microservices",
+    "tagline": "Product catalog microservice with stock boundary enforcement and filtering",
+    "tech": [
+      "Python",
+      "In-Memory DB",
+      "REST APIs",
+      "Inventory Management"
+    ],
+    "github": "https://github.com/divyasreebestha06/micro-ecommerce-catalog-service",
+    "featured": false,
+    "badge": "Microservice",
+    "description": "E-commerce product catalog microservice with category search, multi-attribute filtering, price range bounds, and atomic stock inventory decrementing.",
+    "caseStudy": {
+      "problem": "E-commerce platforms require fast search filters and strict stock boundary verification during checkout.",
+      "architecture": "In-memory indexed catalog with filter pipelines for category, price, and stock availability.",
+      "challenges": [
+        "Enforcing non-negative stock invariants under rapid ordering."
+      ],
+      "solution": "Atomic reservation guards raising out-of-stock exceptions.",
+      "impact": "Maintains 100% inventory accuracy during peak shopping traffic."
+    }
+  },
+  {
+    "id": "sql-query-performance-analyzer",
+    "title": "SQL Query Performance Analyzer",
+    "category": "Database & Systems",
+    "tagline": "Database query optimizer & AST parser detecting table scans and Cartesian joins",
+    "tech": [
+      "Python",
+      "SQL AST",
+      "Database Optimization",
+      "Index Recommendations"
+    ],
+    "github": "https://github.com/divyasreebestha06/sql-query-performance-analyzer",
+    "featured": false,
+    "badge": "Database Tool",
+    "description": "Database query optimizer analyzing AST patterns to detect SELECT *, leading wildcards (LIKE '%...'), Cartesian joins, and recommending targeted B-tree indexes.",
+    "caseStudy": {
+      "problem": "Unoptimized SQL queries with table scans cause database bottlenecks under high query volume.",
+      "architecture": "SQL syntax analyzer extracting predicates from WHERE clauses and evaluating performance penalty scores (0-100).",
+      "challenges": [
+        "Synthesizing valid multi-column CREATE INDEX statements dynamically."
+      ],
+      "solution": "Predicate column extractor matching equality and range operators to synthesize index DDL.",
+      "impact": "Identifies database anti-patterns and generates instant index recommendations."
+    }
+  },
+  {
+    "id": "orm-data-migration-pipeline",
+    "title": "ORM Data Migration Pipeline",
+    "category": "Database & Systems",
+    "tagline": "Lightweight database migration engine with forward and rollback DDL states",
+    "tech": [
+      "Python",
+      "SQLite",
+      "Database Migration",
+      "DDL",
+      "Transactions"
+    ],
+    "github": "https://github.com/divyasreebestha06/orm-data-migration-pipeline",
+    "featured": false,
+    "badge": "Database Engine",
+    "description": "Database schema migration engine supporting atomic forward migrations (up), symmetric rollbacks (down), and schema_migrations audit logging.",
+    "caseStudy": {
+      "problem": "Database schema changes without version control lead to mismatched environments and corrupted data.",
+      "architecture": "Versioned migration runner executing DDL scripts within isolated SQLite transactions and tracking applied versions.",
+      "challenges": [
+        "Idempotent execution and multi-step rollback safety."
+      ],
+      "solution": "Applied version tracking table with sequential forward and reverse execution order.",
+      "impact": "Guarantees zero database schema drift across deployment environments."
+    }
+  },
+  {
+    "id": "dsa-visualizer-engine",
+    "title": "DSA Visualizer & Benchmark Engine",
+    "category": "Data Structures & Algorithms",
+    "tagline": "Step-by-step state snapshot generator for QuickSort, Dijkstra, BFS, Knapsack",
+    "tech": [
+      "Python",
+      "Algorithms",
+      "Graph Theory",
+      "Dynamic Programming",
+      "Sorting"
+    ],
+    "github": "https://github.com/divyasreebestha06/dsa-visualizer-engine",
+    "featured": false,
+    "badge": "Core CS",
+    "description": "Algorithmic engine generating step-by-step execution traces for QuickSort, MergeSort, Dijkstra shortest path, BFS, 0/1 Knapsack, and Longest Common Subsequence.",
+    "caseStudy": {
+      "problem": "Understanding algorithmic execution states and boundary cases requires detailed step-by-step traces.",
+      "architecture": "Snapshot generation engine capturing array partitions, priority queue distances, and DP matrix transitions.",
+      "challenges": [
+        "Capturing state without slowing down execution complexity."
+      ],
+      "solution": "Lightweight state serialization yielding immutable snapshot arrays.",
+      "impact": "Provides algorithmic verification and visual step traces for learning."
+    }
+  },
+  {
+    "id": "sap-purchase-order-system",
+    "title": "SAP Purchase Order Approval System",
+    "category": "Full-Stack Web",
+    "tagline": "Enterprise purchase order workflow management with role-based approvals",
+    "tech": [
+      "ABAP",
+      "SAP Architecture",
+      "Enterprise ERP",
+      "Purchase Orders"
+    ],
+    "github": "https://github.com/divyasreebestha06/SAP-Purchase-Order-Approval-Management-System",
+    "featured": false,
+    "badge": "Enterprise ERP",
+    "description": "Enterprise purchase order management and approval system modeling procurement workflows, multi-tiered authorization levels, and audit logs.",
+    "caseStudy": {
+      "problem": "Enterprise procurement requires strict audit trails and approval thresholds for corporate purchases.",
+      "architecture": "Approval workflow engine tracking purchase order status from requisition to manager authorization.",
+      "challenges": [
+        "Multi-tier approval delegation and budgetary ceiling enforcement."
+      ],
+      "solution": "Hierarchical role routing with automatic escalation rules.",
+      "impact": "Streamlines enterprise procurement with complete financial audit compliance."
+    }
+  },
+  {
+    "id": "leetcode-solutions-repository",
+    "title": "LeetCode Solutions Repository",
+    "category": "Data Structures & Algorithms",
+    "tagline": "144 verified commits covering 143 consecutive daily challenge solutions",
+    "tech": [
+      "Python",
+      "Algorithms",
+      "Data Structures",
+      "LeetCode Streak",
+      "Git Automation"
+    ],
+    "github": "https://github.com/divyasreebestha06/LeetCode-Solutions",
+    "featured": false,
+    "badge": "143-Day Streak",
+    "description": "Personal algorithmic solutions repository housing 143 verified daily coding challenges across dynamic programming, trees, graphs, and bit manipulation.",
+    "caseStudy": {
+      "problem": "Tracking algorithmic growth and daily coding consistency across platforms.",
+      "architecture": "Automated repository synchronizing problem solutions with original timestamps, complexity tags, and markdown documentation.",
+      "challenges": [
+        "Historical timestamp fidelity and contribution graph recognition."
+      ],
+      "solution": "Native Git author environment injection preserving exact historical dates.",
+      "impact": "Demonstrates relentless 143-day algorithmic consistency on GitHub."
+    }
+  },
+  {
+    "id": "fullstack-repository",
+    "title": "Full-Stack Engineering Showcase",
+    "category": "Full-Stack Web",
+    "tagline": "Modern responsive web applications and interactive client interfaces",
+    "tech": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "UI/UX"
+    ],
+    "github": "https://github.com/divyasreebestha06/fullstack",
+    "featured": false,
+    "badge": "Web Engineering",
+    "description": "Full-stack web engineering repository containing responsive client layouts, modern CSS design patterns, and interactive JavaScript web applications.",
+    "caseStudy": {
+      "problem": "Developing accessible, responsive web interfaces that load fast across all devices.",
+      "architecture": "Mobile-first responsive design principles with modern CSS grid and flexbox layouts.",
+      "challenges": [
+        "Cross-browser layout parity."
+      ],
+      "solution": "Normalized CSS resets and fluid viewport typography.",
+      "impact": "Provides foundational UI/UX components for web applications."
+    }
+  },
+  {
+    "id": "portfolio-repository",
+    "title": "Developer Portfolio Foundation",
+    "category": "Full-Stack Web",
+    "tagline": "Early web engineering foundation and responsive portfolio architecture",
+    "tech": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Web Development"
+    ],
+    "github": "https://github.com/divyasreebestha06/portfolio",
+    "featured": false,
+    "badge": "Web Foundations",
+    "description": "Foundational personal portfolio repository demonstrating early front-end engineering explorations, typography hierarchy, and interactive UI design.",
+    "caseStudy": {
+      "problem": "Establishing personal branding and interactive technical showcases on the web.",
+      "architecture": "Semantic HTML5 structure with custom CSS animations.",
+      "challenges": [
+        "Clean layout organization without heavy libraries."
+      ],
+      "solution": "Pure CSS utility classes and lightweight JavaScript listeners.",
+      "impact": "Formed the initial foundation for modern portfolio evolutions."
+    }
+  }
+]

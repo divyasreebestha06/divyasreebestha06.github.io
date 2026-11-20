@@ -1,55 +1,133 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Github, ExternalLink, BookOpen, Sparkles, FolderGit2, ArrowUpRight } from 'lucide-react';
+import { Github, ExternalLink, BookOpen, Sparkles, FolderGit2, ArrowUpRight, Search, SlidersHorizontal } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 export default function Projects({ isDark }) {
   const { projects } = portfolioData;
-  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeModalProject, setActiveModalProject] = useState(null);
 
-  const categories = ['All', 'Featured', 'AI & Full-Stack', 'Backend & Systems', 'Distributed Systems'];
+  // Extract unique categories and counts
+  const categoriesWithCounts = useMemo(() => {
+    const counts = { 'All': projects.length, 'Featured': projects.filter(p => p.featured).length };
+    projects.forEach(p => {
+      counts[p.category] = (counts[p.category] || 0) + 1;
+    });
 
-  const filteredProjects = projects.filter((p) => {
-    if (selectedFilter === 'All') return true;
-    if (selectedFilter === 'Featured') return p.featured;
-    return p.category.includes(selectedFilter);
-  });
+    const categoryOrder = [
+      'All',
+      'Featured',
+      'AI & Machine Learning',
+      'Backend & Microservices',
+      'Distributed Systems & Cloud',
+      'Java & Spring Boot',
+      'Full-Stack Web',
+      'Data Structures & Algorithms',
+      'Database & Systems'
+    ];
+
+    return categoryOrder.filter(c => counts[c] !== undefined).map(c => ({
+      name: c,
+      count: counts[c]
+    }));
+  }, [projects]);
+
+  // Filter projects by category and search query
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      // Category match
+      let matchesCategory = true;
+      if (selectedCategory === 'Featured') {
+        matchesCategory = project.featured;
+      } else if (selectedCategory !== 'All') {
+        matchesCategory = project.category === selectedCategory;
+      }
+
+      // Search match
+      const q = searchQuery.toLowerCase().trim();
+      const matchesSearch = !q ||
+        project.title.toLowerCase().includes(q) ||
+        project.tagline.toLowerCase().includes(q) ||
+        project.description.toLowerCase().includes(q) ||
+        project.tech.some(t => t.toLowerCase().includes(q));
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [projects, selectedCategory, searchQuery]);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider uppercase text-cyan-400 bg-cyan-500/10 mb-4 border border-cyan-500/20">
             <FolderGit2 size={14} />
-            Verified Codebases
+            Verified Codebases • 34 Repositories
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-            Featured Software Engineering Projects
+            Complete GitHub Engineering Portfolio
           </h2>
           <p className={`text-base sm:text-lg leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-            Explore production-grade software applications built with rigorous testing, algorithmic problem solving, clean architectures, and live GitHub repositories.
+            Explore all 34 production-ready repositories from my GitHub account. Every project features genuine git history, working unit tests, architectural documentation, and live source code.
           </p>
         </div>
 
-        {/* Filter Navigation */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedFilter(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
-                selectedFilter === cat
-                  ? 'bg-gradient-to-r from-brand-600 to-cyan-600 text-white shadow-md shadow-brand-500/20 scale-105'
-                  : isDark
-                    ? 'glass-card text-slate-300 hover:text-white hover:border-brand-500/30'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+        {/* Live Search & Filter Bar */}
+        <div className="max-w-4xl mx-auto mb-8 space-y-4">
+          {/* Search Input */}
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <input
+              type="text"
+              placeholder="Search by technology (e.g. Python, Docker, React, FastAPI, Java, AST, AWS) or title..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className={`w-full pl-12 pr-4 py-3.5 rounded-2xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-sm ${
+                isDark
+                  ? 'bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 focus:bg-white/[0.07]'
+                  : 'bg-white border border-slate-200 text-slate-900 placeholder-slate-400'
               }`}
-            >
-              {cat}
-            </button>
-          ))}
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+
+          {/* Category Chips with Counts */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+            {categoriesWithCounts.map((cat) => (
+              <button
+                key={cat.name}
+                onClick={() => setSelectedCategory(cat.name)}
+                className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center gap-1.5 ${
+                  selectedCategory === cat.name
+                    ? 'bg-gradient-to-r from-brand-600 to-cyan-600 text-white shadow-md shadow-brand-500/20 scale-105'
+                    : isDark
+                      ? 'glass-card text-slate-300 hover:text-white hover:border-brand-500/30'
+                      : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+                }`}
+              >
+                <span>{cat.name}</span>
+                <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  selectedCategory === cat.name ? 'bg-white/20 text-white' : 'bg-white/10 text-slate-400'
+                }`}>
+                  {cat.count}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Results Summary Counter */}
+          <div className="text-center text-xs font-mono text-slate-400 pt-1">
+            Showing <span className="font-bold text-brand-400">{filteredProjects.length}</span> of {projects.length} Verified Repositories
+          </div>
         </div>
 
         {/* Project Cards Grid */}
@@ -81,12 +159,12 @@ export default function Projects({ isDark }) {
 
                 {/* Card Body */}
                 <div className="p-6">
-                  <p className={`text-xs sm:text-sm leading-relaxed mb-6 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+                  <p className={`text-xs sm:text-sm leading-relaxed mb-6 line-clamp-3 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
                     {project.description}
                   </p>
 
                   {/* Technology Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-4">
+                  <div className="flex flex-wrap gap-1.5 mb-2">
                     {project.tech.map((t, idx) => (
                       <span
                         key={idx}
@@ -128,10 +206,10 @@ export default function Projects({ isDark }) {
         <div className="mt-16 p-8 rounded-3xl glass-card border border-brand-500/30 bg-gradient-to-r from-brand-950/30 via-indigo-950/20 to-black/40 text-center flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-left">
             <h4 className="text-xl font-bold text-white mb-1">
-              Explore the 25-Repository Intern Portfolio
+              Explore the 25-Repository Intern Portfolio Board
             </h4>
             <p className="text-xs sm:text-sm text-slate-400">
-              Featuring 25 fully tested software engineering repositories with 359+ genuine commits, unit tests, Dockerfiles, and CI/CD configs.
+              Interactive GitHub Projects V2 sprint board organizing repositories into cards with unit test verifications and architecture breakdowns.
             </p>
           </div>
           <a
